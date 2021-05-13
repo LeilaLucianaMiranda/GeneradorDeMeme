@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/dac9c574a1.js" crossorigin="anonymous"></script>
+
+
+</head>
+<body class="tema">
+  <!--FALTAN PONER ID-->
+    <header>
+        <h1 class="titulo-principal">GENERADOR DE MEMES</h1>
+        <div class="contenedor-boton panel-botones">
+            <button class="boton boton-texto">
+              <i class="far fa-file-image boton-icono" aria-hidden= "true" ></i>
+                Imagen
+            </button>
+            <button class="boton boton-texto">
+                <i class="fas fa-font boton-icono" aria-hidden="true"></i>
+                Texto
+           </button>
+           <button class="boton boton-modooscuro">
+                <i class="fas fa-lightbulb boton-icono" aria-label="cambiar modo oscuro"></i>
+              Modo oscuro
+            </button>
+            <button class="boton boton-modoclaro">
+                <i class="fas fa-lightbulb boton-icono" aria-label="cambiar modo claro"></i>
+                Modo claro
+            </button>
+        </div>
+    </header>  
+  <!-- CONTENEDOR PARA EDITAR EL MEME, MAIN-->
+    <div class="editor-contenedor">
+        <main class="contenedor-meme">
+          <div class="canvas-meme">
+            <p class="texto-meme">
+              TOP TEXT
+            </p>
+            <div class="imagen-meme"> </div> <!-- preguntar que hay que poner -->
+            <p class="texto-meme">
+              BOTTOM TEXT
+            </p>
+          </div>
+          <button type="button" class="boton boton-texto" id="descargar-meme">
+            <i class="fas fa-download" aria hidden="true"></i> 
+              Descargar meme
+          </button>
+        </main>
+<!--EMPEZAMOS ASIDE-->
+        <aside class="panel oculto" id="">
+          <button class="panel-cerrar-boton">
+            <i class="fas fa-times" aria-hidden="true"></i> 
+          </button>
+          <section class="panel-img" id="">
+            <h2 class="panel-titulo">
+              Imagen
+            </h2>
+            <div class="control-panel">
+              <h3 class="control-panel-titulo">
+                Url
+              </h3>
+              <input type="text" class="control-panel-input" id="">
+            </div>
+            <div class="control-panel">
+              <h3 class="control-panel-titulo">
+                Fondo
+              </h3>
+              <div class="control-panel-columnas">
+                <div class="control-panel-columna control-panel-color">
+                  <input aria-label="" type="color" id="" value="#ffffff"> 
+                  <span id="" aria-hidden=""> 
+                    #ffffff
+                  </span>
+                </div>
+                <div class="control-panel-columna">
+                  <select aria-label="" class="control-panel-input" id="">
+                    <option value="unset">
+                      Ninguno
+                    </option>
+                    <option value="lighten">
+                      Aclarar
+                    </option>
+                    <option value="darken">
+                      Oscurecer
+                    </option>
+                    <option value="difference">
+                      Diferencia
+                    </option>
+                    <option value="luminosity">
+                      Luminosidad
+                    </option>
+                    <option value="multiply">
+                      Multiplicar
+                    </option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="control-panel">
+              <h3 class= "control-panel-titulo">
+                Filtros
+              </h3>
+              <div class="control-panel-slider">
+                <label for="">
+                  Brillo
+                </label>
+                <input type="range" id="" min="0" max="1" value="1" step="0.1">
+              </div>
+              <div class="control-panel-slider">
+                <label for="">
+                  Opacidad
+                </label>
+                <input type="range" id="" min="0" max="1" value="1" step="0.1">
+              </div>
+              <div class="control-panel-slider">
+                <label for="" >
+                  Contraste
+                </label>
+                <input type="range" id="" min="100" max="1000" value="100">
+              </div>
+              <div class="control-panel-slider">
+                <label for="">
+                  Desenfoque
+                </label>
+                <input type="range" id="" min="0" max="10" value="0" step="0.1">
+              </div>
+              <div class="control-panel-slider">
+                <label for="">
+                  Escala de grises
+                </label>
+                <input type="range" id="" min="0" max="100" value="0">
+              </div>
+              <div class="control-panel-slider">
+                <label for="">
+                  Sepia
+                </label>
+                <input type="range" id="" min="0" max="100" value="0">
+              </div>
+              <div class="control-panel-slider">
+                <label for="">
+                Hue
+               </label>
+                <input type="range" id="" min="0" max="360" value="0">
+              </div>
+              <div class="control-panel-slider">
+                <label for="">
+                  Saturado
+                </label>
+                <input type="range" id="" min="100" max="1000" value="100" step="10">
+              </div>
+              <div class="control-panel-slider">
+                <label for="">
+                  Negativo
+                </label>
+                <input type="range" id="" min="0" max="1" value="0" step="0.1">
+              </div>
+            </div>
+            <button class="boton boton-defecto">
+              Reestablecer filtros
+            </button>
+          </section>
+
+          <!--TEXT PANEL-->
+          <section class="" id="">
+            <h2 class="panel-titulo">
+              Texto
+            </h2>
+            <div class="control-panel">
+              <h3 class="control-panel-titulo">
+                Superior
+              </h3>
+              <textarea aria-label="" class="control-panel-input" id="">
+                Top text
+              </textarea>
+              <div class="flex-contenedor control-panel-checkbox">
+                <input type="checkbox" id="">
+                <label for="">
+                  Sin texto superior
+                </label>
+              </div>
+            </div>
+
+            <div class="control-panel">
+              <h3 class="control-panel-titulo">
+                Inferior
+              </h3>
+              <textarea aria-label="" class="control-panel-input" id="">
+                Botton text
+              </textarea>
+              <div class="flex-contenedor control-panel-checkbox">
+                <input type="checkbox" id="">
+                <label for="">
+                  Sin texto inferior
+                </label>
+              </div>
+            </div>
+
+            <!--FUENTE-->
+            <div class="control-panel">
+              <h3 class="control-panel-titulo">
+                Fuente
+              </h3>
+              <!--FAMILIA DE FUENTES-->
+              <select name="familia de fuente" id="" class="control-panel-input" aria-label="">
+                <option value="Arial">
+                  Arial
+                </option>
+                <option value="Arial black">
+                  Arial black
+                </option>
+                <option value="American Typewriter">
+                  American Typewriter
+                </option>
+                <option value="Andale Mono">
+                  Andale Mono
+                </option>
+                <option value="Comic Sans MS">
+                  Comic Sans MS
+                </option>
+                <option value="Helvetica">
+                  Helvetica
+                </option>
+                <option value="Impact">
+                  Impact
+                </option>
+                <option value="Verdana">
+                  Verdana
+                </option>
+                <option value="Times New Roman">
+                  Times New Roman
+                </option>
+              </select>
+              <div class="flex-contenedor">
+                <!--TAMAÑO-->
+                <input type="number" name="tamaño de fuente" aria-label="" class="control-panel-input" id="" min="12" value="40">
+                <!--ALINEACIÓN-->
+                <div class="contenedor-boton boton-alineacion">
+                  <button class="boton boton-defecto" id="" aria-label="">
+                    <i class="fas fa-align-left"></i>
+                  </button>
+                  <button class="boton boton-defecto" id="" aria-label="">
+                    <i class="fas fa-align-center"></i>
+                  </button>
+                  <button class="boton boton-defecto" id="" aria-label="">
+                    <i class="fas fa-align-right"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!--COLOR-->
+            <div class="control-panel">
+              <div class="control-panel-columnas">
+             <!--COLOR DE TEXTO-->
+                <div class="control-panel control-panel-columna">
+                  <h3 class="control-panel-titulo">
+                    Color
+                  </h3>
+                  <div class="control-panel-color">
+                    <input name="color de texto" type="color" id="" value="#000000" aria-label="color de texto">
+                    <span id="" aria-hidden="true">
+                      #000000
+                    </span>
+                  </div>
+                </div>
+              <!--COLOR DE FONDO-->  
+                <div class="control-panel control-panel-columna">
+                  <h3 class="control-panel-titulo">
+                    Fondo
+                  </h3>
+                  <div class="control-panel-color">
+                    <input name="color de fondo de texto" type="color" id="" value="#ffffff" aria-label="">
+                    <span id="" aria-hidden="true">
+                      #ffffff
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="flex-contenedor control-panel-checkbox">
+                <input type="checkbox" id="">
+                <label for="">
+                  Fondo transparente
+                </label>
+              </div>
+            </div>
+
+            <!--CONTORNO-->
+            <div class="control-panel">
+              <h3 class="control-panel-titulo">
+                Contorno
+              </h3>
+              <div class="boton-contenedor">
+                <button class="boton boton-defecto" id="">
+                  Ninguno
+                </button>
+                <button class="boton boton-defecto" id="">
+                  Claro
+                </button>
+                <button class="boton boton-defecto" id="">
+                  Oscuro
+                </button>
+              </div>
+            </div>
+
+            <!--PADDING-->
+            <div class="control-panel" >
+              <h3 class="control-panel-titulo">
+                Espaciado
+              </h3>
+              <input type="number" id="" class="control-panel-input" aria-label="" min="10" max="50" value="35">
+            </div>
+
+            <!--ALTO DE LINEA-->
+            <div class="control-panel">
+              <h3 class="control-panel-titulo">
+                Interlineado
+              </h3>
+              <select id="" class="control-panel-input" aria-label="">
+                <option value="0.8">
+                  0.8
+                </option>
+                <option value="1">
+                  1
+                </option>
+                <option value="1.2">
+                  1.2
+                </option>
+                <option value="1.5">
+                  1.5
+                </option>
+                <option value="2">
+                  2
+                </option>
+                <option value="2.5">
+                  2.5
+                </option>
+              </select>
+            </div>
+          </section>
+        </aside>
+    </div>
+
+
+</body>
+</html>

@@ -1,0 +1,219 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    display:flex;
+    flex-direction:column;
+    color: #fff;
+    overflow:hidden;
+    height: 100vh;
+    margin:0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.tema{
+    background: #000;
+}
+/* comenzamos con el header*/
+header{
+    background: #191E2B;
+    display:block;
+}
+input, button, select, textarea{
+    border: 0;
+    font-family: 'Open Sans', sans-serif;
+    background-color: transparent;
+    display: block;
+    outline: 0;
+    color: white;
+}
+.titulo-principal{
+    text-align:center;
+    margin: 10px;
+    font-size: 36px;
+}
+
+.panel-botones{
+    justify-content: center;
+}
+
+.contenedor-boton{
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 5px;
+}
+
+.boton{
+    height: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    font-size: 14px;
+}
+
+.boton-icono{
+    margin-right: 5px;
+    display: block;
+}
+/* comenzamos el editor de meme */
+.editor-contenedor{
+    display: flex;
+    flex-grow: 1;
+}
+
+.contenedor-meme{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #30343f;
+    padding: 0 20px 0 20px;
+}
+
+.canvas-meme{
+    width: 100%;
+    max-width: 610px;
+    height: 610px;
+    background-color: black;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.texto-meme{
+    width: 100%;
+    background-color: white;
+    color: black;
+    text-align: center;
+    padding: 35px 50px 35px 50px;
+    font-size: 40px;
+    font-weight: 800;
+    font-family: Impact;
+    position: static;
+}
+
+.imagen-meme{
+    width: 100%;
+    flex-grow: 1;
+    background-size: cover;
+}
+/* COMENZAMOS EL ASIDE*/
+.panel{
+    width: 260px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: #252935;
+    padding: 30px 15px;
+    overflow: auto;
+    position: fixed;
+    margin: 0;
+    box-shadow: -10px 10px 100px 5px rgba(0, 0, 0, 0.3);
+    z-index: 10;
+}
+/* 
+.oculto{
+    display: none;
+}
+*/
+
+.panel-cerrar-boton{
+    position: fixed;
+    margin: 15px 15px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.panel-titulo{
+    color: white;
+    margin-top: 0;
+    margin-bottom: 20px;
+    width: 100%;
+    font-size: 18px;
+    text-align: center;
+}
+.panel-control{
+    margin-bottom: 20px;
+}
+.panel-control-titulo{
+    color: white;
+    margin-bottom: 8px;
+    width: 100%;
+    font-size: 12px;
+    margin-top: 0;
+}
+.control-panel-input{
+    width: 100%;
+    height: 36px;
+    background-color: #393e49;
+    border-radius: 5px;
+    transition: background-color 0.2s;
+    padding: 5px 10px 5px 10px;
+    margin-bottom: 5px;
+}
+.control-panel-columnas{
+    display: flex;
+    justify-content: space-between;
+}
+.control-panel-columnas .control-panel-columna{
+    width: calc(50%-5px);
+    margin-bottom: 0;
+}
+.control-panel.color{
+    position: relative;
+    height: 36px;
+    display: flex;
+}
+.control-panel-color > span {
+    position: absolute;
+    left: 35px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 14px;
+}
+option{
+    font-weight: normal;
+    display: block;
+    white-space: nowrap;
+    min-height: 1.2em;
+    padding: 0px 2px 1px 2px;
+}
+.control-panel-slider{
+    margin-top: 15px;
+}
+label{
+    display: block;
+    font-size: 12px;
+    color: white;
+}
+.boton-defecto{
+    background-color: #393e49;
+}
+.control-panel-titulo{
+    color: white;
+    margin-bottom: 8px;
+    width: 100%;
+    font-size: 12px;
+    margin-top: 0;
+}
+.flex-contenedor{
+    display: flex;
+    align-items: center;
+}
+.control-panel-checkbox{
+    margin-top: 10px;
+    font-size: 12px;
+}
+.boton-alineacion{
+    width: calc(50%-2.5px);
+    justify-content: space-between;
+    margin-left: 2.5px;
+}
