@@ -38,16 +38,21 @@ input, button, select, textarea{
     margin: 10px;
     font-size: 36px;
     font-weight: 600;
+    letter-spacing: -1px;
 }
 /*BOTONES*/
+
 .panel-botones{
     justify-content: center;
 }
 
-.contenedor-boton{
+.contenedor-boton {
     display: flex;
     flex-wrap: wrap;
     margin-bottom: 5px;
+}
+.contenedor-boton .boton {
+    margin: 2.5px;
 }
 
 .boton{
@@ -72,8 +77,14 @@ input, button, select, textarea{
 .boton-defecto:hover
 .boton-defecto:focus{
     background-color:#393e49 ;
-
 }
+.modo-claro .boton-modo-claro, .modo-oscuro .boton-modo-oscuro {
+    display: flex;
+}
+.modo-oscuro .boton-modo-claro, .modo-claro .boton-modo-oscuro{
+    display: none;
+}
+
 /* comenzamos el editor de meme */
 .editor-contenedor{
     display: flex;
